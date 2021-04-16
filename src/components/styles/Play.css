@@ -1,0 +1,6 @@
+.Play_container:hover {
+    background-image: -webkit-linear-gradient(-126deg,transparent 0%,transparent 50%, white 50%, white 100%),
+ -webkit-linear-gradient(  0deg, rgba(0,0,0,0.37) 0%, rgba(0,0,0,0.37) 50%, white 50%, white 100%);
+ background-size:0.3em 0.3em;
+ cursor: pointer;
+}

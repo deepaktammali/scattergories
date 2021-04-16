@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Grid, GridItem, Center } from '@chakra-ui/react'
 
-function App() {
+import "@fontsource/roboto";
+
+// React Components
+import Letter from './components/Letter'
+import Categories from './components/Categories'
+import Restart from './components/Restart'
+import Time from './components/Time'
+import Play from "./components/Play";
+
+// CSS
+import "./App.css";
+
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Center h="100%" w='100%'>
+      <Grid
+      className='App_container border_container'
+      templateColumns='1.5fr 1.5fr 5fr 1fr'
+      templateRows='repeat(2,1fr)'
+      width="96vw"
+      height="90vh"
+      marginTop="2.5vh"
+      fontFamily="Roboto"
+    >
+      <GridItem colSpan={2} className='App_griditem border_container'>
+        <Letter></Letter>
+      </GridItem>
+      <GridItem rowSpan={2} className='border_container'>
+        <Categories></Categories>
+      </GridItem>
+      <GridItem rowSpan={2} className='border_container'>
+          <Restart></Restart>
+      </GridItem>
+      <GridItem className='border_container'>
+          <Time></Time>
+      </GridItem>
+      <GridItem className='border_container'>
+        <Play></Play>
+      </GridItem>
+    </Grid>
+    </Center>
+  )
 }
 
 export default App;

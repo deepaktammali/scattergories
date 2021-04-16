@@ -1,0 +1,17 @@
+.Letter_container {
+  background-image: linear-gradient(
+    45deg,
+    #000000 6.25%,
+    #ffffff 6.25%,
+    #ffffff 50%,
+    #000000 50%,
+    #000000 56.25%,
+    #ffffff 56.25%,
+    #ffffff 100%
+  );
+  background-size: 8px 8px;
+}
+
+.Letter_reroll:hover{
+    cursor: pointer;
+}
