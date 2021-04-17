@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, GridItem, Center } from '@chakra-ui/react'
-
+import {RecoilRoot} from "recoil";
 import "@fontsource/roboto";
 
 // React Components
@@ -16,6 +16,7 @@ import "./App.css";
 
 function App () {
   return (
+    <RecoilRoot>
     <Center h="100%" w='100%'>
       <Grid
       className='App_container border_container'
@@ -43,6 +44,7 @@ function App () {
       </GridItem>
     </Grid>
     </Center>
+    </RecoilRoot>
   )
 }
 

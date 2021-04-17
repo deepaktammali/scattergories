@@ -1,7 +1,7 @@
 import React from "react";
 import {Box} from "@chakra-ui/react";
 
-function TimeChange(){
+function TimeChange({isDisabled}){
     return (
         <Box className="Time_change">
             Change

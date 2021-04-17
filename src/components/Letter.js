@@ -1,15 +1,20 @@
 import React from 'react'
-import { Center, Flex, Box } from '@chakra-ui/react'
+import { Center, Flex, Box,Fade } from '@chakra-ui/react'
+import { useRecoilValue } from 'recoil';
+
+import letterState from "../state/letter_state";
 import LetterTitle from './LetterTitle'
 import LetterReRoll from './LetterReRoll'
-
 import "./styles/Letter.css";
 
-function Letter (props) {
-  return (
 
-    <Flex className="Letter_container" fontWeight="bold" h="100%" w="100%" justifyContent="space-around" flexDirection="column">
-      <Flex justifyContent="space-around">
+function Letter (props) {
+
+  const letterStateValue = useRecoilValue(letterState);
+
+  return (
+    <Flex alignItems="center" justifyContent="flex-start" className="Letter_container" fontWeight="bold" h="100%" w="100%" flexDirection="column">
+      <Flex  w="100%" justifyContent="space-around">
       <Box p="1rem">
         <LetterTitle />
       </Box>
@@ -17,8 +22,8 @@ function Letter (props) {
         <LetterReRoll />
       </Box>
       </Flex>
-      <Center fontSize='15rem' height='100%'>
-        D
+      <Center w="100%"  fontSize='15rem' height='15rem'>
+      {letterStateValue}
       </Center>
     </Flex>
   )
