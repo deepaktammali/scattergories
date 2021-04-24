@@ -18,6 +18,7 @@ function LetterReRoll(){
         <Box
         className="Letter_reroll"
         onClick={handleReRollClick}
+        fontSize="1.2rem"
         >
             Re-Roll
         </Box>

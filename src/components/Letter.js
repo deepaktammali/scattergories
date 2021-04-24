@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Center, Flex, Box,Fade } from '@chakra-ui/react'
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 
 import letterState from "../state/letter_state";
 import LetterTitle from './LetterTitle'
 import LetterReRoll from './LetterReRoll'
 import "./styles/Letter.css";
+import generateRandomLetter from '../utils/generateRandomLetter';
+import gamePlayState from '../state/play_status_state';
 
 
 function Letter (props) {
 
-  const letterStateValue = useRecoilValue(letterState);
+  const [letterStateValue,setLetterStateValue] = useRecoilState(letterState);
+  const gamePlayStatus = useRecoilValue(gamePlayState);
+
+  useEffect(()=>{
+    if(gamePlayStatus.isRestarted){
+      setLetterStateValue(generateRandomLetter());}
+  },[gamePlayStatus])
+
 
   return (
     <Flex alignItems="center" justifyContent="flex-start" className="Letter_container" fontWeight="bold" h="100%" w="100%" flexDirection="column">

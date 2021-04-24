@@ -4,7 +4,8 @@
     position: relative;
 }
 *{
-    font-family: "Roboto";
+    /* font-family: "Roboto"; */
+    font-family: 'Space Mono', monospace;
     user-select: none;
     position: relative;
 }

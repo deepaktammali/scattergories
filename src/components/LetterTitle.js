@@ -3,7 +3,7 @@ import {Box} from "@chakra-ui/react";
 
 function LetterTitle(){
     return (
-        <Box>Letter</Box>
+        <Box fontSize="1.2rem">Letter</Box>
     );
 }
 

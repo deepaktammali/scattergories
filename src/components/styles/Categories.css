@@ -1,3 +1,7 @@
 .Categories_stack::-webkit-scrollbar{
     display: none;
 }   
+
+.hide_text{
+    background-color: black;
+}
